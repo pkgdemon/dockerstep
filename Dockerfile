@@ -13,6 +13,9 @@ RUN git clone https://github.com/pkgdemon/gnustep-theme-rik.git
 # Set the environment variable to avoid GNUstep warnings
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 
+# Add the GNUstep environment variables
+RUN . /usr/local/share/GNUstep/Makefiles/GNUstep.sh
+
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080
 

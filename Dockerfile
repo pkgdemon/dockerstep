@@ -3,7 +3,7 @@ FROM debian:bookworm-slim
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y git make gnustep gnustep-devel && \
+    apt-get install -y git gnustep gnustep-devel gnustep-make && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

@@ -7,9 +7,9 @@ GNUstep running in docker for experimentation
 * xhost
 * xwayland
 
-Building:
+Getting the image:
 ```
-docker build -t dockerstep .
+docker pull ghcr.io/pkgdemon/dockerstep:main
 ```
 
 Running as regular user:

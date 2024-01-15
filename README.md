@@ -23,6 +23,7 @@ Running as specific user:
 docker run -it --rm \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -u $(id -u jmaloney):$(id -g jmaloney) \
-    your-image-name
+    -v /home/$USER:/home/$USER \
+    -u $(id -u $USER):$(id -g $USER) \
+    gnustep
 ```

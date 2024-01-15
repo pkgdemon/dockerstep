@@ -1,9 +1,9 @@
 # Use Debian Bookworm as the base image
 FROM debian:bookworm-slim
 
-# Install necessary dependencies for X11 and Wayland with XWayland
+# Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y git gmake gnustep gnustep-devel && \
+    apt-get install -y git make gnustep gnustep-devel && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

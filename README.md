@@ -11,11 +11,6 @@ Building:
 ```
 docker build -t dockerstep .
 ```
-Before running the container we need use allow X forwarding
-
-```
-xhost +
-````
 
 Running as regular user:
 

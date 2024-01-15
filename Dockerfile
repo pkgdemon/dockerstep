@@ -10,9 +10,6 @@ RUN apt-get update && \
 # Clone the git repo for rik theme
 RUN git clone https://github.com/pkgdemon/gnustep-theme-rik.git
 
-# Build the rik theme and install it
-RUN cd gnustep-theme-rik && gmake && gmake install
-
 # Set the environment variable to avoid GNUstep warnings
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 

@@ -13,14 +13,13 @@ RUN git clone https://github.com/pkgdemon/gnustep-theme-rik.git
 # Set the environment variable to avoid GNUstep warnings
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 
-# Add the GNUstep environment variables
-RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles"
-RUN . /usr/lib/GNUstep/Makefiles/GNUstep.sh
-
-# Try to generate Makefile for rik theme
-RUN cd /gnustep-theme-rik && gnustep-config --objc-flags > Makefile 
-RUN cd /gnustep-theme-rik && gmake
-RUN cd /gnustep-theme-rik && gmake install
+# Build and install the rik theme
+WORKDIR /gnustep-theme-rik
+RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
+    . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
+    gnustep-config --objc-flags > Makefile && \
+    gmake && \
+    gmake install
 
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080

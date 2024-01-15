@@ -1,6 +1,9 @@
 # Use Debian Bookworm as the base image
 FROM debian:bookworm-slim
 
+# Add contrib repository to sources.list
+RUN echo "deb http://deb.debian.org/debian/ bookworm contrib" >> /etc/apt/sources.list
+
 # Install necessary dependencies
 RUN apt-get update && \
     apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer && \

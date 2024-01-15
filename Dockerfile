@@ -14,7 +14,7 @@ RUN git clone https://github.com/AlessandroSangiuliano/rik.theme.git
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 
 # Build and install the rik theme
-WORKDIR /rik,theme
+WORKDIR /rik.theme
 RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
     . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
     gnustep-config --objc-flags > Makefile && \

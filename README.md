@@ -3,13 +3,13 @@ GNUstep running in docker for experimentation
 
 #### Requirements
 
-* docker
+* docker (The user must also be a member of docker group)
 * xhost
 * xwayland
 
 Building:
 ```
-docker build -t gnustep .
+docker build -t dockerstep .
 ```
 Before running the container we need use allow X forwarding
 
@@ -17,13 +17,8 @@ Before running the container we need use allow X forwarding
 xhost +
 ````
 
-Running as specific user:
+Running as regular user:
 
 ```
-docker run -it --rm \
-    -e DISPLAY=$DISPLAY \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v /home/$USER:/home/$USER \
-    -u $(id -u $USER):$(id -g $USER) \
-    gnustep
+./dockerstep
 ```

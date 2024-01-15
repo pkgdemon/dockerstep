@@ -18,7 +18,9 @@ RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles"
 RUN . /usr/lib/GNUstep/Makefiles/GNUstep.sh
 
 # Try to generate Makefile for rik theme
-RUN cd gnustep-theme-rik && gnustep-config --objc-flags > Makefile && gmake && gmake install
+RUN cd /gnustep-theme-rik && gnustep-config --objc-flags > Makefile 
+RUN cd /gnustep-theme-rik && gmake
+RUN cd /gnustep-theme-rik && gmake install
 
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080

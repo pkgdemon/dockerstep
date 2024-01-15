@@ -3,7 +3,7 @@ FROM debian:bookworm-slim
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y git gnustep gnustep-devel gnustep-make make && \
+    apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

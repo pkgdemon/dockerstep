@@ -16,6 +16,9 @@ ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 # Add the GNUstep environment variables
 RUN . /usr/lib/GNUstep/Makefiles/GNUstep.sh
 
+# Try to generate Makefile for rik theme
+RUN cd gnustep-theme-rik && gnustep-config --objc-flags > Makefile
+
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080
 

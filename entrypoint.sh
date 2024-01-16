@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get the current user from the USER environment variable
+current_user=$USER
+
 # Check if GNUstep directory exists in user's home
 if [ ! -d "/home/$USER/GNUstep" ]; then
     # If not, copy GNUstep defaults recursively from /etc/skel

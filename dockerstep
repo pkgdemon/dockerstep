@@ -6,11 +6,6 @@ if [ "$EUID" -eq 0 ]; then
     exit 1
 fi
 
-if [ ! -d "/home/${USER}/GNUstep" ] ; then
-  mkdir /home/${USER}/GNUstep/
-  cp -R /etc/GNUstep/* /home/${USER}/GNUstep/
-fi
-
 xhost +
 
 docker run -it --rm \

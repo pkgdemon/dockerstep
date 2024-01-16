@@ -11,7 +11,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy GNUStep defaults
-COPY GNUstep /etc/skel/GNUstep
+COPY GNUstep /etc/GNUstep
 
 # Set the environment variable to avoid GNUstep warnings
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal

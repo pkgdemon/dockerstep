@@ -6,7 +6,7 @@ RUN echo "deb http://deb.debian.org/debian/ bookworm contrib" >> /etc/apt/source
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer zsh && \
+    apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer sudo zsh && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

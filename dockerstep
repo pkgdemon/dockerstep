@@ -10,6 +10,7 @@ xhost +
 
 docker run -it --rm \
     -e DISPLAY=$DISPLAY \
+    -e USER=$USER \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v /home/$USER:/home/$USER \
     -v /etc/passwd:/etc/passwd:ro \

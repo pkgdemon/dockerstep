@@ -10,6 +10,9 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Create a sudoers file with wheel group permissions
+RUN echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel
+
 # Copy GNUStep defaults
 COPY GNUstep /etc/skel/GNUstep
 

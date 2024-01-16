@@ -18,5 +18,4 @@ docker run -it --rm \
     -v /etc/shadow:/etc/shadow:ro \
     -v /etc/sudoers.d:/etc/sudoers.d:ro \
     --user $(id -u):$(id -g) \
-    --shell /usr/bin/zsh \
     ghcr.io/pkgdemon/dockerstep:main

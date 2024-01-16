@@ -19,5 +19,8 @@ ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080
 
-# Start GWorkspace with XWayland
-CMD ["GWorkspace", "--display", ":1"]
+# Copy the entry point script
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# Set the entry point
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

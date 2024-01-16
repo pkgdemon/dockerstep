@@ -6,12 +6,12 @@ RUN echo "deb http://deb.debian.org/debian/ bookworm contrib" >> /etc/apt/source
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer && \
+    apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer zsh && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy GNUStep defaults
-COPY GNUstep /etc/GNUstep
+COPY GNUstep /etc/skel/GNUstep
 
 # Set the environment variable to avoid GNUstep warnings
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal

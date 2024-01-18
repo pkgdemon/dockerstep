@@ -21,7 +21,7 @@ This project allows developers to explore the roots of macOS development by prov
 
 #### Requirements
 
-1.) **Docker:** The project relies on Docker for containerization. Ensure that Docker is installed on your machine. You can download Docker [here](https://www.docker.com/get-started).
+1. **Docker:** The project relies on Docker for containerization. Ensure that Docker is installed on your machine. You can download Docker [here](https://www.docker.com/get-started).
 
 **Note:** Additionally, the user running the project must be a member of the `docker` group to have the necessary permissions to interact with Docker without using `sudo`.
 
@@ -31,7 +31,7 @@ This project allows developers to explore the roots of macOS development by prov
 sudo usermod -aG docker username
 ```
 
-2.) **xhost:** The xhost command is used to control access to the X server for X Window System applications. Make sure it is installed on your system.
+2. **xhost:** The xhost command is used to control access to the X server for X Window System applications. Make sure it is installed on your system.
 
 ```
 # Install xhost (replace the package manager command based on your distribution)

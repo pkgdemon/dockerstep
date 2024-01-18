@@ -1,5 +1,5 @@
 # dockerstep
-This project provides a Dockerized environment for experimenting with GNUstep and customizing the layout to resemble macOS, particularly focusing on implementing a global menu. GNUstep is an open-source implementation of the NeXTSTEP and macOS development environment.
+This project provides a Dockerized environment for experimenting with GNUstep and customizing the layout to resemble macOS.
 
 ![Screenshot_20240115_201929](https://github.com/pkgdemon/dockerstep/assets/4109732/85f80b20-fb79-49c2-abd3-86da280f2eba)
 

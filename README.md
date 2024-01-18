@@ -19,7 +19,7 @@ Key aspects that NeXTSTEP introduced and influenced in macOS development include
 
 This project allows developers to explore the roots of macOS development by providing a customizable GNUstep environment that reflects the heritage of NeXTSTEP.
 
-#### Requirements
+## Requirements
 
 1. **Docker:** The project relies on Docker for containerization. Ensure that Docker is installed on your machine. You can download Docker [here](https://www.docker.com/get-started).
 

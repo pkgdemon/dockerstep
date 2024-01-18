@@ -30,7 +30,7 @@ This project allows developers to explore the roots of macOS development by prov
 sudo usermod -aG docker username
 ```
 
-2. **xhost:** The xhost command is used to control access to the X server for X Window System applications. Make sure it is installed on your system.
+2. **xhost:** The xhost command is used to control access to the X server for X Window System applications. It is necessary to be able to launch the GUI.
 
 ```
 # Install xhost (replace the package manager command based on your distribution)

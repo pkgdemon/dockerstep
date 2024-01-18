@@ -22,7 +22,7 @@ This project allows developers to explore the roots of macOS development by prov
 ## Requirements
 
 1. **Linux:** This setup is expected to work seamlessly on Linux.  For Windows users utilizing WSL (Windows Subsystem for Linux), this setup should also work given the compatibility of Docker with WSL.
-On macOS, the setup should work as long as Docker and Xorg requirements can be met.
+On macOS, the setup should work as long as Docker and Xorg requirements can be met through macports or XQuartz package.
 
 2. **Docker:** The project relies on Docker for containerization. Ensure that Docker is installed on your machine. You can download Docker [here](https://www.docker.com/get-started).
 

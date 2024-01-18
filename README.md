@@ -38,13 +38,27 @@ sudo usermod -aG docker username
 sudo apt-get install x11-xserver-utils  # For Debian/Ubuntu
 ```
 
-Getting the image:
-```
-docker pull ghcr.io/pkgdemon/dockerstep:main
-```
+## Pulling the Docker Image and Launching the GUI
 
-Running as regular user:
+To use the `dockerstep` command to pull the image and launch the GUI, follow these steps:
 
-```
-./dockerstep
-```
+1. **Pull the Docker Image:**
+
+   Pull the Docker image from the repository using the following command:
+
+   ```
+   docker pull ghcr.io/pkgdemon/dockerstep:main
+   '''
+
+2. **Clone this repository to your local machine:**
+   ```
+   git clone https://github.com/pkgdemon/docker.git
+   ```
+
+3. **Running as regular user:**
+
+   Entrer the directory and execute the ***dockerstep*** command to run the Docker container and launch the GUI. It is important to run this command as your user so your home directory can be shared with the container:
+
+   ```
+   cd dockerstep && dockerstep
+   ```

@@ -27,9 +27,9 @@ This project allows developers to explore the roots of macOS development by prov
 
 **Add the user to the docker group (replace 'username' with your actual username)**
 
-'''
+```
 sudo usermod -aG docker username
-'''
+```
 
 2.) **xhost:** The xhost command is used to control access to the X server for X Window System applications. Make sure it is installed on your system.
 

@@ -19,6 +19,17 @@ COPY GNUstep /etc/skel/GNUstep
 # Set the environment variable to avoid GNUstep warnings
 ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 
+# Clone the git repo for rik theme
+RUN git clone https://github.com/pkgdemon/gnustep-theme-rik.git
+
+# Build and install the rik theme
+WORKDIR /gnustep-theme-rik
+RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
+    . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
+    gnustep-config --objc-flags > Makefile && \
+    gmake && \
+    gmake install
+
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080
 

@@ -25,9 +25,8 @@ This project allows developers to explore the roots of macOS development by prov
 
 **Note:** Additionally, the user running the project must be a member of the `docker` group to have the necessary permissions to interact with Docker without using `sudo`.
 
-**Add the user to the docker group (replace 'username' with your actual username)**
-
 ```
+# Add the user to the docker group (replace 'username' with your actual username)
 sudo usermod -aG docker username
 ```
 

@@ -33,10 +33,10 @@ sudo usermod -aG docker username
 
 2.) **xhost:** The xhost command is used to control access to the X server for X Window System applications. Make sure it is installed on your system.
 
-'''
+```
 # Install xhost (replace the package manager command based on your distribution)
 sudo apt-get install x11-xserver-utils  # For Debian/Ubuntu
-'''
+```
 
 Getting the image:
 ```

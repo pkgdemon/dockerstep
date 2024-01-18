@@ -21,9 +21,22 @@ This project allows developers to explore the roots of macOS development by prov
 
 #### Requirements
 
-* docker (The user must also be a member of docker group)
-* xhost
-* xwayland
+1.) **Docker:** The project relies on Docker for containerization. Ensure that Docker is installed on your machine. You can download Docker [here](https://www.docker.com/get-started).
+
+**Note:** Additionally, the user running the project must be a member of the `docker` group to have the necessary permissions to interact with Docker without using `sudo`.
+
+**Add the user to the docker group (replace 'username' with your actual username)**
+
+'''
+sudo usermod -aG docker username
+'''
+
+2.) **xhost:** The xhost command is used to control access to the X server for X Window System applications. Make sure it is installed on your system.
+
+'''
+# Install xhost (replace the package manager command based on your distribution)
+sudo apt-get install x11-xserver-utils  # For Debian/Ubuntu
+'''
 
 Getting the image:
 ```

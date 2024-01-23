@@ -38,7 +38,7 @@ WORKDIR /netsurf-gnustep
 RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
     . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
     gnustep-config --objc-flags > Makefile && \
-    gmake --TARGET=gnustep && \
+    gmake TARGET=gnustep && \
     gmake install
 
 # Expose the default GNUstep port (per GWorkspace configuration)

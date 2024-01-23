@@ -22,8 +22,8 @@ ENV GS_INSTALLATION_DOMAIN GSDomainLocal
 # Clone the git repo for rik theme
 RUN git clone https://github.com/pkgdemon/gnustep-theme-rik.git
 
-# Clone the git repo for GSWebBrowser
-RUN git clone https://github.com/onflapp/gs-webbrowser
+# Clone the git repo for browser
+RUN git clone https://github.com/anthonyc-r/netsurf-gnustep
 
 # Build and install the rik theme
 WORKDIR /gnustep-theme-rik
@@ -33,12 +33,12 @@ RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
     gmake && \
     gmake install
 
-# Build and install gs-webbrowser
-WORKDIR /gs-webbrowser
+# Build and install browser
+WORKDIR /netsurf-gnustep
 RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
     . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
     gnustep-config --objc-flags > Makefile && \
-    gmake && \
+    gmake --TARGET=gnustep && \
     gmake install
 
 # Expose the default GNUstep port (per GWorkspace configuration)

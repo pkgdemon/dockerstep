@@ -6,7 +6,7 @@ RUN echo "deb http://deb.debian.org/debian/ bookworm contrib" >> /etc/apt/source
 
 # Install necessary dependencies
 RUN apt-get update && \
-    apt-get install -y git gnustep gnustep-devel gnustep-make libcss-parser0 libx11-dev make pkg-config ttf-mscorefonts-installer sudo zsh && \
+    apt-get install -y git gnustep gnustep-devel gnustep-make make ttf-mscorefonts-installer sudo zsh && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -31,13 +31,6 @@ RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
     . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
     gnustep-config --objc-flags > Makefile && \
     gmake && \
-    gmake install
-
-# Build and install browser
-WORKDIR /netsurf-gnustep
-RUN export GNUSTEP_MAKEFILES="/usr/lib/GNUstep/Makefiles" && \
-    . /usr/lib/GNUstep/Makefiles/GNUstep.sh && \
-    gmake TARGET=gnustep && \
     gmake install
 
 # Expose the default GNUstep port (per GWorkspace configuration)

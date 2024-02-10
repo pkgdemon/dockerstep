@@ -55,7 +55,7 @@ To use the `dockerstep` command to pull the image and launch the GUI, follow the
 
    Run the following command to clone this respositry to your machine:
    ```
-   git clone https://github.com/pkgdemon/docker.git
+   git clone https://github.com/pkgdemon/dockerstep.git
    ```
 
 3. **Running as regular user:**

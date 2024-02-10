@@ -7,4 +7,4 @@ if [ ! -d "/home/$USER/GNUstep" ]; then
 fi
 
 # Start GWorkspace with XWayland
-exec GWorkspace --display ":1"
+exec GWorkspace --display ":0"

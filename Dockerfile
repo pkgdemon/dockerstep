@@ -51,6 +51,7 @@ RUN git clone --depth 1 https://github.com/gnustep/libs-gui.git /gnustep-src/lib
 RUN git clone --depth 1 https://github.com/gnustep/libs-back.git /gnustep-src/libs-back
 RUN git clone --depth 1 https://github.com/gnustep/apps-gworkspace.git /gnustep-src/apps-gworkspace
 RUN git clone --depth 1 https://github.com/gnustep/apps-systempreferences.git /gnustep-src/apps-systempreferences
+RUN git clone --depth 1 https://github.com/gnustep/gap /gnustep-src/gap
 
 # Build and install gnustep-make
 RUN cd /gnustep-src/tools-make && \
@@ -114,6 +115,12 @@ RUN . /System/Library/Makefiles/GNUstep.sh && \
 RUN . /System/Library/Makefiles/GNUstep.sh && \
     export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/apps-systempreferences && \
+    gmake && \
+    gmake install
+
+# Build Terminal
+RUN . /System/Library/Makefiles/GNUstep.sh && \
+    cd /gnustep-src/gap/system-apps/Terminal && \
     gmake && \
     gmake install
 

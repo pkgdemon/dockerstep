@@ -120,9 +120,6 @@ RUN rm -rf /gnustep-src
 # Create a sudoers file with wheel group permissions
 RUN echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel
 
-# Copy GNUStep defaults
-COPY GNUstep /etc/skel/GNUstep
-
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080
 

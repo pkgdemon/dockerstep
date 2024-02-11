@@ -39,9 +39,10 @@ RUN apt-get update && \
     libxtst-dev \
     ninja-build \
     sudo \
+    wmaker \
     x11proto-core-dev \
     x11proto-xext-dev \
-    wmaker && \
+    xterm && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

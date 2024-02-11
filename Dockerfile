@@ -124,14 +124,14 @@ RUN . /System/Library/Makefiles/GNUstep.sh && \
     gmake && \
     gmake install
 
+# Build Chess
+RUN . /System/Library/Makefiles/GNUstep.sh && \
+    cd /gnustep-src/gap/ported-apps/Games/Chess && \
+    gmake && \
+    gmake install
+
 # Cleanup GNUstep sources
 RUN rm -rf /gnustep-src
-
-# Create a sudoers file with wheel group permissions
-RUN echo '%wheel ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/wheel
-
-# Create a sudoers file with sudo group permissions
-RUN echo '%sudo ALL=(ALL) NOPASSWD: ALL' > /etc/sudoers.d/sudo
 
 # Expose the default GNUstep port (per GWorkspace configuration)
 EXPOSE 8080

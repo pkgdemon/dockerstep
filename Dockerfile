@@ -7,6 +7,7 @@ RUN apt-get update && \
     build-essential \
     clang \
     cmake \
+    firefox \
     git \
     libcairo2-dev \
     libcups2-dev \
@@ -40,6 +41,7 @@ RUN apt-get update && \
     sudo \
     x11proto-core-dev \
     x11proto-xext-dev && \
+    windowmaker \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

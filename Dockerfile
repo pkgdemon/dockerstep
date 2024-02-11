@@ -7,7 +7,7 @@ RUN apt-get update && \
     build-essential \
     clang \
     cmake \
-    firefox \
+    firefox-esr \
     git \
     libcairo2-dev \
     libcups2-dev \

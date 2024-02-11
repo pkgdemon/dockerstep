@@ -41,7 +41,7 @@ RUN apt-get update && \
     sudo \
     x11proto-core-dev \
     x11proto-xext-dev \
-    windowmaker && \
+    wmaker && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

@@ -40,8 +40,8 @@ RUN apt-get update && \
     ninja-build \
     sudo \
     x11proto-core-dev \
-    x11proto-xext-dev && \
-    windowmaker \
+    x11proto-xext-dev \
+    windowmaker && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 

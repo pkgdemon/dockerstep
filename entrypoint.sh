@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/zsh
+
+source /System/Library/Makefiles/GNUstep.sh
 
 # Start GWorkspace with XWayland
-exec GWorkspace --display ":0"
+exec openapp GWorkspace --display ":0"

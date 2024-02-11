@@ -64,11 +64,9 @@ RUN cd /gnustep-src/tools-make && \
     --with-library-combo=ng-gnu-gnu && \
     gmake install
 
-# Additional step: Set the installation domain for libobjc2
-RUN echo "GNUSTEP_INSTALLATION_DOMAIN=SYSTEM" >> /etc/GNUstep.conf
-
 # Build and install libobjc2
 RUN . /System/Library/Makefiles/GNUstep.sh && \
+    export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/libobjc2/ && \
     mkdir Build && \
     cd Build && \
@@ -82,6 +80,7 @@ RUN . /System/Library/Makefiles/GNUstep.sh && \
 
 # Build gnustep-base
 RUN  . /System/Library/Makefiles/GNUstep.sh && \
+    export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/libs-base && \
     ./configure && \
     gmake && \
@@ -89,6 +88,7 @@ RUN  . /System/Library/Makefiles/GNUstep.sh && \
 
 # Build gnustep-gui
 RUN . /System/Library/Makefiles/GNUstep.sh && \
+    export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/libs-gui && \
     ./configure && \
     gmake && \
@@ -96,6 +96,7 @@ RUN . /System/Library/Makefiles/GNUstep.sh && \
 
 # Build gnustep-back
 RUN . /System/Library/Makefiles/GNUstep.sh && \
+    export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/libs-back && \
     ./configure && \
     gmake && \
@@ -103,6 +104,7 @@ RUN . /System/Library/Makefiles/GNUstep.sh && \
 
 # Build GWorkspace
 RUN . /System/Library/Makefiles/GNUstep.sh && \
+    export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/apps-gworkspace && \
     ./configure && \
     gmake && \
@@ -110,6 +112,7 @@ RUN . /System/Library/Makefiles/GNUstep.sh && \
 
 # Build SystemPreferences
 RUN . /System/Library/Makefiles/GNUstep.sh && \
+    export GNUSTEP_INSTALLATION_DOMAIN=SYSTEM && \
     cd /gnustep-src/apps-systempreferences && \
     gmake && \
     gmake install
